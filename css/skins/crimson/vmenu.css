@@ -1,0 +1,112 @@
+/** begin vertical-menu # added in 1.3 **/
+.vmenu, .vmenu ul{list-style: none;  display: block;}
+.vmenu, .vmenu li{display: block;  margin: 0;   padding: 0;   width: auto;   line-height: 0;}
+.sidebar1 .vmenu{ margin: 0 0 0 20px;  -moz-border-radius: 5px 0 0 5px;   -webkit-border-radius: 5px 0 0 5px;   -ms-border-radius: 5px 0 0 5px;   -o-border-radius: 5px 0 0 5px;   border-radius: 5px 0 0 5px; }
+.sidebar2 .vmenu{ margin: 0 15px 0 -10px;  -moz-border-radius: 0 5px 5px 0;   -webkit-border-radius: 0 5px 5px 0;   -ms-border-radius: 0 5px 5px 0;   -o-border-radius: 0 5px 5px 0;}
+.vmenu{
+-moz-box-shadow: 0 3px 0 #C0C0C0;
+-webkit-box-shadow: 0 3px 0 #C0C0C0;
+-ms-box-shadow: 0 3px 0 #C0C0C0;
+-o-box-shadow: 0 3px 0 #C0C0C0;
+box-shadow: 0 3px 0 #C0C0C0;}
+.sidebar1 .vmenublock-body .blockheader{margin: 10px 10px 20px 20px}
+.sidebar2 .vmenublock-body .blockheader{margin: 10px 5px 20px 10px}
+.vmenu ul{   display: none;   margin: 0;   padding: 0;   position:relative;}
+.vmenu ul.active{   display: block;}
+
+/* Main menu item */
+.vmenu a {display: block;   z-index:0;   text-decoration: none;   font-style: normal;   font-weight: normal;  margin-left:0;   margin-right:0;   position:relative;}
+.vmenu li{position:relative;}
+.vmenu>li>a {color: #BFBFBF;   padding: 0 21px 0 21px;   height: 45px;   line-height: 45px !important;   white-space: nowrap;   border-style: none solid;   border-width: 0 1px;   margin-top: 1px;   margin-bottom: 1px;   border-color: #424242;   text-shadow: none;}
+.vmenu>li>a.active {color: #FFFFFF;   border-color: #7E2020;   z-index: 1;   text-shadow: none;}
+.vmenu a:hover, .vmenu a.active:hover {color: #FFFFFF;   text-shadow: none}
+.vmenu>li>a:before, .vmenu>li>a:after {position: absolute;   display: block;   content: ' ';   z-index:-1;   background-image: url('../../../images/skins/crimson/vmenuitem.png');   top:0;   height:45px;   
+-moz-box-shadow: 0 1px 0 #404040 inset;
+-webkit-box-shadow: 0 1px 0 #404040 inset;
+-ms-box-shadow: 0 1px 0 #404040 inset;
+-o-box-shadow: 0 1px 0 #404040 inset;
+box-shadow: 0 1px 0 #404040 inset;}
+.vmenu>li>a:before{left: 0;   right: 16px;   background-position: top left;}
+.vmenu>li>a:after{width: 16px;   right: 0;   background-position: top right;}
+.vmenu>li>a.active:before {background-position: bottom left;}
+.vmenu>li>a.active:after {background-position: bottom right;}
+.vmenu>li>a:hover:before  {background-position: center left;}
+.vmenu>li>a:hover:after {background-position: center right;}
+.vmenu>li>a.active:before, .vmenu>li>a.active:after, .vmenu>li>a:hover:before, .vmenu>li>a:hover:after {-moz-box-shadow: none;-webkit-box-shadow: none;-ms-box-shadow: none;-o-box-shadow: none;box-shadow: none;}
+.vmenu>li{margin-top:0;}
+.vmenu>li>ul{margin-top:0;  padding-bottom: 0;}
+.vmenu>li:first-child{margin-top:0;}
+.vmenu>li>a>span.border-top, .vmenu>li>a>span.border-bottom{display: block;   position: absolute;   content: ' ';   left: -1px;   right: -1px;   height: 1px;   background-color: transparent;   z-index: -1;}
+.vmenu>li>a>span.border-top {top: -1px;   background-color: #424242;}
+.vmenu>li>a>span.border-bottom {   bottom: -1px;   background-color: #424242;}
+.vmenu>li>a.active:hover {   border-color: #424242;}
+.vmenu>li>a.active:hover>span.border-top, .vmenu>li>a.active:hover>span.border-bottom {background-color: transparent;}
+.vmenu>li>a.active:hover>span.border-top, .vmenu>li>a.active:hover>span.border-bottom {   background-color: #424242;   z-index: 1;}
+.vmenu>li>a.active>span.border-top, .vmenu>li>a.active>span.border-bottom {background-color: #7E2020;   z-index: 1;}
+/*a:hover link color*/
+.vmenu>li>a:hover {border-color: #D14747 !important;   z-index: 2;}			
+.vmenu>li>a:hover>span.border-top, .vmenu>li>a:hover>span.border-bottom {background-color: #D14747 !important;   z-index: 2;}
+
+/* sub-menu item */
+.vmenu ul li{margin: 0;   padding: 0;}
+.vmenu li li, .vmenu li li a {   position:relative;}
+.vmenu ul a{display: block;   position:relative;   white-space: nowrap;   height: 32px;   overflow: visible;   background: url('../../../images/skins/crimson/vsubitem.png') repeat-x scroll top left transparent;  padding:0;   padding-left:38px;   padding-right:0;   line-height: 32px;   color: #0F1D24;   font-size: 12px;   margin-left: 0;   margin-right: 0;}
+.vmenu ul a.active{background-position: bottom left;}
+.vmenu ul a:hover{background-position: center left;   line-height: 32px;   color: #0F1D24;   font-size: 12px;   margin-left: 0;   margin-right: 0;}
+.vmenu ul li li a:hover, .vmenu ul li li a:hover.active{background-position: left center;}
+.vmenu ul a:after{display: block;   position:absolute;   top:13px;   content:' ';   width: 3px;   height: 5px;   overflow: visible;   background: url('../../../images/skins/crimson/vsubitemicon.png') no-repeat scroll top left; left:  25px;}
+.vmenu ul a:hover:after{background-position: center left}
+.vmenu ul a.active:hover:after{background-position: center left;}
+.vmenu ul a.active:after{background-position: bottom left;}
+.vmenu ul a:link, .vmenu ul a:visited, .vmenu ul a:active{line-height: 32px;   color: #FFFFFF; margin-left: 0;   margin-right: 0;   text-shadow: none;}
+.vmenu>li>ul>li:first-child{padding-top: 0;   margin-top:0;} 
+.vmenu li li{position:relative;  margin-top:0;}
+.vmenu ul ul a:after{left:50px;}
+.vmenu ul ul ul a:after{left:75px;}
+.vmenu ul ul ul ul a:after{left:100px;}
+.vmenu ul ul ul ul ul a:after{left:125px;}
+.vmenu ul ul a{padding-left:63px;}
+.vmenu ul ul ul a{padding-left:88px;}
+.vmenu ul ul ul ul a{padding-left:113px;}
+.vmenu ul ul ul ul ul a{padding-left:138px;}
+.vmenu ul li a.active {color: #FFFFFF;}
+.vmenu ul li a:hover, .vmenu ul li a:hover.active {color: #FFFFFF;}
+.vmenu li li a {border: 1px solid transparent;   border-style: none solid;   border-width: 0 1px;   margin-top: 1px;   margin-bottom: 1px;   border-color: #424242}
+.vmenu li li a.active:hover {border-color: #424242;}
+.vmenu li li a span.border-top, .vmenu li li a span.border-bottom{   display: block;   position: absolute;   content: ' ';   left: -1px;   right: -1px;   height: 1px;background-color: transparent;  z-index: -1;}
+.vmenu li li a span.border-top {top: -1px;  background-color: #424242;}
+.vmenu li li a span.border-bottom {bottom: -1px; background-color: #424242;}
+.vmenu li li a.active:hover span.border-top, .vmenu li li a.active:hover span.border-bottom {background-color: transparent;}
+.vmenu li li a.active:hover span.border-top, .vmenu li li a.active:hover span.border-bottom {background-color: #424242;}
+/*li li a:hover link color*/
+.vmenu li li a.active {border-color: #AF2C2C; z-index: 1; text-shadow: none;}
+.vmenu li li a.active span.border-top, .vmenu li li a.active span.border-bottom {background-color: #AF2C2C;  z-index: 1;}
+.vmenu li li a:hover {border-color: #AF2C2C !important;  z-index: 2; text-shadow: none}
+.vmenu li li a:hover span.border-top, .vmenu li li a:hover span.border-bottom {background-color: #AF2C2C !important;   z-index: 2;}
+
+/*ie7 specific*/
+.ie7 .vmenu>li>a>span.vmenu-l,.ie7  ul.vmenu>li>a>span.vmenu-r{ position: absolute;   display: block;   z-index:-1;   background-image: url('../../../images/skins/crimson/vmenuitem.png');   top:0;   height:45px;}
+.ie7 .vmenu>li>a>span.vmenu-l{left: 0;   right: 16px;  background-position: top left;}
+.ie7 .vmenu>li>a>span.vmenu-r{width: 16px;   right: 0;   background-position: top right;}
+.ie7 .vmenu>li>a.active>span.vmenu-l { background-position: bottom left;}
+.ie7 .vmenu>li>a.active>span.vmenu-r {  background-position: bottom right;}
+.ie7 .vmenu>li>a:hover>span.vmenu-l  {  background-position: center left;}
+.ie7 .vmenu>li>a:hover>span.vmenu-r {  background-position: center right;}
+.ie7 .vmenu .vmenu-separator,.ie7  ul.vmenu .vmenu-separator-bg{ display: block;   position:absolute;   left:0;   right:0;}
+.ie7 .vmenu>li,.ie7  ul.vmenu>li>ul {clear: both;}
+.ie7 .vmenu>li:hover {   float: left;   width: 100%;   z-index: 10;}
+.ie7 .vmenu>li.active {   float: left;   width: 100%;   z-index: 9;}
+
+.ie7 .vmenu ul a>span.vmenu-icon{display: block;   position:absolute;   top:13px;   width: 3px;   height: 5px;   overflow: visible;   background-image: url('../../../images/skins/crimson/vsubitemicon.png');   background-position: top left;   background-repeat: no-repeat;   left:  25px;}
+.ie7 .vmenu ul a:hover>span.vmenu-icon{ background-position: center left;}
+.ie7 .vmenu ul a.active:hover>span.vmenu-icon{background-position: center left;}
+.ie7 .vmenu ul a.active>span.vmenu-icon{ background-position: bottom left;}
+.ie7 .vmenu ul ul a>span.vmenu-icon{left:50px;}
+.ie7 .vmenu ul ul ul a>span.vmenu-icon{left:75px;}
+.ie7 .vmenu ul ul ul ul a>span.vmenu-icon{left:100px;}
+.ie7 .vmenu ul ul ul ul ul a>span.vmenu-icon{left:125px;}
+.ie7 .vmenu li li a {float: left;}
+.ie7 .vmenu li li,.ie7  ul.vmenu li li ul {clear: both;}
+.ie7 .vmenu li li:hover {float: left; z-index: 10;}
+.ie7 .vmenu li li.active {float: left;  z-index: 9;}
+/** end vertical-menu **/
