@@ -165,7 +165,7 @@ $(document).ready(function(){
 jQuery(function($){
       $(".tweeter_widget").tweet({
         join_text: "auto",
-        username: "arrowthemes",
+        username: "EnyFarika80",
         avatar_size: null,
         count: 1,
         auto_join_text_default: "I said,",
